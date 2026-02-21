@@ -84,28 +84,12 @@ export default function Testimonials() {
 
             <div className="max-w-7xl mx-auto px-6 relative z-10">
 
-                <div className="flex flex-col lg:flex-row justify-between items-center lg:items-end text-center lg:text-left mb-16 gap-6">
+                <div className="flex flex-col items-center text-center mb-16 gap-6">
                     <h2 className="text-4xl md:text-5xl font-sans font-extrabold text-slate-900 tracking-tight">
                         User Testimonials
                     </h2>
 
-                    {/* Desktop Navigation */}
-                    <div className="hidden lg:flex gap-4">
-                        <button
-                            onClick={prevSlide}
-                            className="w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 hover:text-brand-green hover:shadow-md transition-all cursor-pointer"
-                            aria-label="Previous testimonial"
-                        >
-                            <ChevronLeft className="w-6 h-6" />
-                        </button>
-                        <button
-                            onClick={nextSlide}
-                            className="w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 hover:text-brand-green hover:shadow-md transition-all cursor-pointer"
-                            aria-label="Next testimonial"
-                        >
-                            <ChevronRight className="w-6 h-6" />
-                        </button>
-                    </div>
+
                 </div>
 
                 {/* Carousel Container */}
@@ -150,8 +134,8 @@ export default function Testimonials() {
                     </div>
                 </motion.div>
 
-                {/* Mobile Navigation */}
-                <div className="flex lg:hidden justify-center gap-4 mt-8">
+                {/* Navigation Arrows */}
+                <div className="flex justify-center gap-4 mt-12">
                     <button
                         onClick={prevSlide}
                         className="w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 hover:bg-slate-50 hover:text-brand-green transition-all shadow-sm cursor-pointer"

@@ -39,18 +39,13 @@ export default function ResearchAcademy() {
         <section className="py-20 bg-brand-light">
             <div className="max-w-7xl mx-auto px-6">
 
-                <div className="flex flex-col sm:flex-row justify-between items-center sm:items-end text-center sm:text-left gap-4 sm:gap-0 mb-12">
-                    <div className="flex flex-col items-center sm:items-start">
-                        <h2 className="text-4xl md:text-5xl font-sans font-extrabold text-slate-900 mb-4 tracking-tight">
-                            KoinBasket Research Academy
-                        </h2>
-                        <p className="text-lg text-slate-500 max-w-2xl font-medium">
-                            Stay ahead of the curve with our expert analysis, educational guides, and market updates.
-                        </p>
-                    </div>
-                    <button className="hidden sm:flex items-center gap-2 text-brand-green font-bold hover:text-brand-lime transition-colors">
-                        View All <ArrowRight className="w-4 h-4" />
-                    </button>
+                <div className="flex flex-col items-center text-center mb-16">
+                    <h2 className="text-4xl md:text-5xl font-sans font-extrabold text-slate-900 mb-4 tracking-tight">
+                        KoinBasket Research Academy
+                    </h2>
+                    <p className="text-lg text-slate-500 max-w-2xl font-medium">
+                        Stay ahead of the curve with our expert analysis, educational guides, and market updates.
+                    </p>
                 </div>
 
                 <motion.div
@@ -125,9 +120,11 @@ export default function ResearchAcademy() {
                     </div>
                 </motion.div>
 
-                <button className="sm:hidden w-full mt-8 flex items-center justify-center gap-2 text-slate-900 border border-slate-200 py-4 rounded-xl font-bold hover:bg-slate-50 transition-colors">
-                    View All <ArrowRight className="w-4 h-4" />
-                </button>
+                <div className="flex justify-center mt-12 w-full">
+                    <button className="w-full sm:w-auto px-8 flex items-center justify-center gap-2 text-slate-900 border border-slate-200 py-4 rounded-xl font-bold hover:bg-slate-50 hover:shadow-sm hover:-translate-y-0.5 transition-all">
+                        View All <ArrowRight className="w-4 h-4" />
+                    </button>
+                </div>
 
             </div>
         </section>

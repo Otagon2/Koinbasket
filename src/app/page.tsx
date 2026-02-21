@@ -1,15 +1,18 @@
+import dynamic from "next/dynamic";
 import Navbar from "@/components/navbar";
 import Hero from "@/components/hero";
 import Companies from "@/components/companies";
-import Steps from "@/components/steps";
-import Features from "@/components/features";
-import Security from "@/components/security";
-import ProductProof from "@/components/product-proof";
-import Rewards from "@/components/rewards";
-import ResearchAcademy from "@/components/research-academy";
-import MediaCoverage from "@/components/media-coverage";
-import Testimonials from "@/components/testimonials";
-import Footer from "@/components/footer";
+
+// Dynamic Imports for below-the-fold content to drastically reduce initial JS bundle size
+const Steps = dynamic(() => import("@/components/steps"), { ssr: true });
+const Features = dynamic(() => import("@/components/features"), { ssr: true });
+const Security = dynamic(() => import("@/components/security"), { ssr: true });
+const ProductProof = dynamic(() => import("@/components/product-proof"), { ssr: true });
+const Rewards = dynamic(() => import("@/components/rewards"), { ssr: true });
+const ResearchAcademy = dynamic(() => import("@/components/research-academy"), { ssr: true });
+const MediaCoverage = dynamic(() => import("@/components/media-coverage"), { ssr: true });
+const Testimonials = dynamic(() => import("@/components/testimonials"), { ssr: true });
+const Footer = dynamic(() => import("@/components/footer"), { ssr: true });
 
 export default function Home() {
   return (

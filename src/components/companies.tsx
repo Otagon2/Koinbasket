@@ -23,7 +23,7 @@ export default function Companies() {
                     viewport={{ once: true }}
                     className="flex flex-col items-center gap-8"
                 >
-                    <p className="text-sm font-medium text-gray-400 uppercase tracking-widest">
+                    <p className="text-sm font-bold text-slate-600/80 uppercase tracking-widest">
                         Backed by prominent CXOs and VCs
                     </p>
 

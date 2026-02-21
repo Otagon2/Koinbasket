@@ -1,12 +1,27 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { AndroidLogo, AppleLogo } from "@/components/icons";
 import { motion } from "framer-motion";
 
 export default function Hero() {
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+    const images = [
+        "/Koinbasket/mobile-hero.png",
+        "/Koinbasket/desktop-hero-new.png"
+    ];
+
+    useEffect(() => {
+        if (isHovered) return;
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prev) => (prev + 1) % images.length);
+        }, 7000); // Hold for 7s before switching
+        return () => clearInterval(interval);
+    }, [isHovered]);
     return (
-        <section id="hero-section" className="relative pt-24 pb-16 md:pt-32 md:pb-20 bg-brand-dark overflow-hidden">
+        <section id="hero-section" className="relative min-h-[100svh] flex items-center pt-24 pb-16 md:pt-32 md:pb-20 bg-brand-dark overflow-hidden">
             {/* Abstract Background Elements */}
             <div className="absolute top-1/4 left-1/4 w-[40rem] h-[40rem] bg-brand-lime/10 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-[30rem] h-[30rem] bg-brand-green/40 rounded-full blur-[100px] pointer-events-none" />
@@ -19,13 +34,13 @@ export default function Hero() {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, ease: "easeOut" }}
-                        className="flex flex-col items-center lg:items-start text-center lg:text-left gap-8 max-w-xl mx-auto lg:mx-0"
+                        className="flex flex-col items-center lg:items-start text-center lg:text-left gap-10 md:gap-12 max-w-xl mx-auto lg:mx-0"
                     >
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.2 }}
-                            className="text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold text-white tracking-tighter leading-[1.05]"
+                            className="text-5xl md:text-6xl lg:text-7xl font-sans font-extrabold text-white tracking-tight leading-[1.15] md:leading-[1.2]"
                         >
                             Build a Smart<br />
                             Crypto Portfolio<br />
@@ -36,7 +51,7 @@ export default function Hero() {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ duration: 0.6, delay: 0.4 }}
-                            className="text-lg md:text-xl text-white/80 font-medium leading-relaxed max-w-xl"
+                            className="text-lg md:text-xl text-white/80 font-medium leading-relaxed md:leading-[1.8] max-w-xl"
                         >
                             Skip the guesswork. Invest in expertly curated crypto baskets that work just like index funds—securely managed through your own exchange.
                         </motion.p>
@@ -45,13 +60,13 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.6, delay: 0.6 }}
-                            className="flex flex-col items-center lg:items-start gap-6 w-full sm:w-auto"
+                            className="flex flex-col items-center lg:items-start gap-8 md:gap-10 w-full sm:w-auto"
                         >
                             <a href="#features" className="w-fit bg-brand-lime text-brand-dark text-base font-bold px-8 py-4 rounded-full hover:bg-[#a5db38] hover:shadow-[0_0_30px_rgba(178,240,66,0.5)] transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group shadow-[0_0_15px_rgba(178,240,66,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
                                 Explore Curated Baskets
                             </a>
 
-                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 border-t border-white/10 pt-4 w-fit md:border-none md:pt-0">
+                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-5 border-t border-white/10 pt-6 w-fit md:border-none md:pt-4">
                                 <span className="text-sm font-medium text-white/90 w-full lg:w-auto mb-2 lg:mb-0">Download App</span>
                                 <div className="flex gap-3">
                                     <a href="#" className="flex items-center gap-3 bg-white/10 hover:bg-white/15 hover:scale-105 transition-all duration-300 px-4 py-2 rounded-2xl cursor-pointer group border border-white/20 shadow-sm backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
@@ -85,16 +100,33 @@ export default function Hero() {
                             <motion.div
                                 animate={{ y: [0, -20, 0] }}
                                 transition={{ repeat: Infinity, duration: 5, ease: "easeInOut" }}
-                                className="relative flex justify-center lg:justify-end"
+                                className="relative flex justify-center items-center w-full max-w-[400px] sm:max-w-[480px] md:max-w-[550px] lg:max-w-[650px] mx-auto lg:ml-auto lg:mr-0 min-h-[400px]"
+                                onMouseEnter={() => setIsHovered(true)}
+                                onMouseLeave={() => setIsHovered(false)}
+                                onTouchStart={() => setIsHovered(true)}
+                                onTouchEnd={() => setIsHovered(false)}
                             >
-                                <Image
-                                    src="/Koinbasket/assets/hero image.png"
-                                    alt="KoinBasket App Experience"
-                                    width={550}
-                                    height={750}
-                                    className="w-auto h-auto max-w-[300px] sm:max-w-[380px] md:max-w-[480px] lg:max-w-[550px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] mx-auto lg:ml-auto lg:mr-0"
-                                    priority
-                                />
+                                {images.map((imgSrc, index) => {
+                                    const isMobileImage = imgSrc.includes('mobile');
+
+                                    // Make the mobile image fit naturally, while cropping and zooming the desktop image
+                                    const sizeClass = isMobileImage
+                                        ? "w-[45%] md:w-[45%] lg:w-[45%] h-auto object-contain" // Increased size for mobile hero on desktop by ~20%
+                                        : "w-[120%] md:w-[130%] lg:w-[150%] h-auto object-contain"; // Reduced desktop image size
+
+                                    return (
+                                        <Image
+                                            key={imgSrc}
+                                            src={imgSrc}
+                                            alt={`KoinBasket App Experience ${index + 1}`}
+                                            width={isMobileImage ? 550 : 1200}
+                                            height={isMobileImage ? 750 : 900}
+                                            className={`absolute inset-0 m-auto drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-all duration-500 ease-out pointer-events-none ${currentImageIndex === index ? "opacity-100 scale-100" : "opacity-0 scale-90"
+                                                } ${sizeClass}`}
+                                            priority={index === 0}
+                                        />
+                                    );
+                                })}
                             </motion.div>
 
                             {/* Background Glow */}
