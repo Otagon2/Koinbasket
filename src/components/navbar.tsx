@@ -72,19 +72,20 @@ export default function Navbar() {
 
                 {/* Desktop Links */}
                 <div className="hidden md:flex items-center gap-8">
-                    <div className="flex items-center gap-6">
-                        {navLinks.map((link) => (
-                            <a
-                                key={link.name}
-                                href={link.href}
-                                className={`text-sm font-semibold transition-colors duration-200 ${isScrolled ? "text-slate-600 hover:text-brand-dark" : "text-white/80 hover:text-white"}`}
-                            >
-                                {link.name}
-                            </a>
-                        ))}
-                    </div>
+                    {navLinks.map((link) => (
+                        <a
+                            key={link.name}
+                            href={link.href}
+                            className={`text-sm font-semibold transition-colors duration-200 ${isScrolled ? "text-slate-600 hover:text-brand-dark" : "text-white/80 hover:text-white"}`}
+                        >
+                            {link.name}
+                        </a>
+                    ))}
+                </div>
 
-                    <div className="flex items-center gap-4 ml-4">
+                {/* Right Actions */}
+                <div className="flex items-center gap-4">
+                    <div className="hidden md:flex items-center gap-6">
                         <button className={`text-sm font-semibold transition-colors duration-200 cursor-pointer ${isScrolled ? "text-slate-600 hover:text-brand-dark" : "text-white/90 hover:text-white"}`}>
                             Log in
                         </button>
@@ -95,16 +96,16 @@ export default function Navbar() {
                             Get Started
                         </button>
                     </div>
-                </div>
 
-                {/* Mobile Menu Toggle */}
-                <button
-                    className={`md:hidden transition-colors duration-200 cursor-pointer ${isScrolled ? "text-brand-dark hover:text-brand-green" : "text-white/90 hover:text-brand-lime"}`}
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                    aria-label="Toggle mobile menu"
-                >
-                    {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-                </button>
+                    {/* Mobile Menu Toggle */}
+                    <button
+                        className={`md:hidden transition-colors duration-200 cursor-pointer ml-2 ${isScrolled ? "text-brand-dark hover:text-brand-green" : "text-white/90 hover:text-brand-lime"}`}
+                        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                        aria-label="Toggle mobile menu"
+                    >
+                        {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                    </button>
+                </div>
             </div>
 
             {/* Mobile Menu */}
