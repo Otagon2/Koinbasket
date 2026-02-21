@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #0a2a1c;
+  --color-brand-green: #0d3420;
+  --color-brand-lime: #b2f042;
+  --color-brand-light: #f6f8fb;
+  --font-sans: var(--font-exo-2);
+  --font-display: var(--font-orbitron);
+}
+
+:root {
+  --background: var(--color-brand-light);
+  --foreground: #1e293b;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
