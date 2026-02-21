@@ -33,7 +33,7 @@ export default function Features() {
                     {/* Card 1: Smart Investing (Dark) */}
                     <motion.div
                         variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                        className="relative overflow-hidden rounded-3xl bg-brand-dark text-white p-8 md:p-10 shadow-xl shadow-brand-dark/10 transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex flex-col sm:flex-row items-center justify-between min-h-[240px] group"
+                        className="relative overflow-hidden rounded-3xl bg-brand-dark text-white p-8 md:p-10 shadow-xl shadow-brand-dark/10 transition-transform duration-300 hover:-translate-y-2 flex flex-col sm:flex-row items-center justify-between min-h-[240px] group"
                     >
                         <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left gap-6 w-full sm:w-1/2 mb-6 sm:mb-0">
                             <div className="w-16 h-16 rounded-2xl mx-auto sm:mx-0 bg-gradient-to-br from-brand-green to-brand-dark border border-white/10 flex items-center justify-center shadow-[0_0_30px_rgba(178,240,66,0.15)] group-hover:shadow-[0_0_40px_rgba(178,240,66,0.25)] transition-shadow">
@@ -54,7 +54,7 @@ export default function Features() {
                     {/* Card 2: Easy Rebalancing (White) */}
                     <motion.div
                         variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                        className="relative overflow-hidden rounded-3xl bg-white text-slate-900 border border-slate-200/60 p-8 md:p-10 shadow-xl shadow-slate-200/50 transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex flex-col sm:flex-row items-center justify-between min-h-[240px] group"
+                        className="relative overflow-hidden rounded-3xl bg-white text-slate-900 border border-slate-200/60 p-8 md:p-10 shadow-xl shadow-slate-200/50 transition-transform duration-300 hover:-translate-y-2 flex flex-col sm:flex-row items-center justify-between min-h-[240px] group"
                     >
                         <div className="relative z-10 flex flex-col items-center sm:items-start text-center sm:text-left gap-6 w-full sm:w-1/2 mb-6 sm:mb-0">
                             <div className="w-16 h-16 rounded-2xl mx-auto sm:mx-0 bg-gradient-to-br from-slate-50 to-slate-100 border border-slate-200 flex items-center justify-center shadow-[0_0_30px_rgba(0,0,0,0.05)] group-hover:shadow-[0_0_40px_rgba(0,0,0,0.1)] transition-shadow">
@@ -74,7 +74,7 @@ export default function Features() {
                     {/* Card 3: Save Time (White) */}
                     <motion.div
                         variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                        className="relative overflow-hidden rounded-3xl bg-white text-slate-900 border border-slate-200/60 p-8 md:p-10 shadow-xl shadow-slate-200/50 transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex flex-col-reverse sm:flex-row items-center justify-between min-h-[240px] group"
+                        className="relative overflow-hidden rounded-3xl bg-white text-slate-900 border border-slate-200/60 p-8 md:p-10 shadow-xl shadow-slate-200/50 transition-transform duration-300 hover:-translate-y-2 flex flex-col-reverse sm:flex-row items-center justify-between min-h-[240px] group"
                     >
                         <div className="relative w-full sm:w-1/2 flex items-center justify-center mt-6 sm:mt-0">
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-blue-100/50 blur-[50px] rounded-full" />
@@ -94,7 +94,7 @@ export default function Features() {
                     {/* Card 4: Bank-Grade Security (Dark) */}
                     <motion.div
                         variants={{ hidden: { opacity: 0, y: 30 }, visible: { opacity: 1, y: 0 } }}
-                        className="relative overflow-hidden rounded-3xl bg-brand-dark text-white p-8 md:p-10 shadow-xl shadow-brand-dark/10 transition-transform duration-300 hover:-translate-y-2 cursor-pointer flex flex-col-reverse sm:flex-row items-center justify-between min-h-[240px] group"
+                        className="relative overflow-hidden rounded-3xl bg-brand-dark text-white p-8 md:p-10 shadow-xl shadow-brand-dark/10 transition-transform duration-300 hover:-translate-y-2 flex flex-col-reverse sm:flex-row items-center justify-between min-h-[240px] group"
                     >
                         <div className="relative w-full sm:w-1/2 flex items-center justify-center mt-6 sm:mt-0">
                             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 bg-brand-lime/20 blur-[50px] rounded-full" />

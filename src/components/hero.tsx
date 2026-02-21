@@ -47,27 +47,27 @@ export default function Hero() {
                             transition={{ duration: 0.6, delay: 0.6 }}
                             className="flex flex-col items-center lg:items-start gap-6 w-full sm:w-auto"
                         >
-                            <button className="w-fit bg-brand-lime text-brand-dark text-base font-bold px-8 py-4 rounded-full hover:bg-[#a5db38] hover:shadow-[0_0_30px_rgba(178,240,66,0.5)] transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group shadow-[0_0_15px_rgba(178,240,66,0.3)]">
+                            <a href="#features" className="w-fit bg-brand-lime text-brand-dark text-base font-bold px-8 py-4 rounded-full hover:bg-[#a5db38] hover:shadow-[0_0_30px_rgba(178,240,66,0.5)] transition-all duration-300 cursor-pointer flex items-center justify-center gap-2 group shadow-[0_0_15px_rgba(178,240,66,0.3)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
                                 Explore Curated Baskets
-                            </button>
+                            </a>
 
                             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 border-t border-white/10 pt-4 w-fit md:border-none md:pt-0">
-                                <span className="text-sm font-medium text-white/70 w-full lg:w-auto mb-2 lg:mb-0">Download App</span>
+                                <span className="text-sm font-medium text-white/90 w-full lg:w-auto mb-2 lg:mb-0">Download App</span>
                                 <div className="flex gap-3">
-                                    <button className="flex items-center gap-3 bg-white/5 hover:bg-white/10 transition-colors duration-200 px-4 py-2 rounded-2xl cursor-pointer group border border-white/10 shadow-sm backdrop-blur-sm">
-                                        <AndroidLogo className="w-6 h-6 text-white" />
+                                    <a href="#" className="flex items-center gap-3 bg-white/10 hover:bg-white/15 hover:scale-105 transition-all duration-300 px-4 py-2 rounded-2xl cursor-pointer group border border-white/20 shadow-sm backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
+                                        <AndroidLogo className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
                                         <div className="text-left flex flex-col justify-center leading-tight">
-                                            <span className="text-[9px] text-white/70 uppercase font-bold">Get it on</span>
+                                            <span className="text-[9px] text-white/90 uppercase font-bold">Get it on</span>
                                             <span className="text-sm font-bold text-white tracking-tight">Google Play</span>
                                         </div>
-                                    </button>
-                                    <button className="flex items-center gap-3 bg-white/5 hover:bg-white/10 transition-colors duration-200 px-4 py-2 rounded-2xl cursor-pointer group border border-white/10 shadow-sm backdrop-blur-sm">
-                                        <AppleLogo className="w-6 h-6 text-white" />
+                                    </a>
+                                    <a href="#" className="flex items-center gap-3 bg-white/10 hover:bg-white/15 hover:scale-105 transition-all duration-300 px-4 py-2 rounded-2xl cursor-pointer group border border-white/20 shadow-sm backdrop-blur-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
+                                        <AppleLogo className="w-6 h-6 text-white group-hover:scale-110 transition-transform duration-300" />
                                         <div className="text-left flex flex-col justify-center leading-tight">
-                                            <span className="text-[9px] text-white/70 uppercase font-bold">Download on the</span>
+                                            <span className="text-[9px] text-white/90 uppercase font-bold">Download on the</span>
                                             <span className="text-sm font-bold text-white tracking-tight">App Store</span>
                                         </div>
-                                    </button>
+                                    </a>
                                 </div>
                             </div>
                         </motion.div>
