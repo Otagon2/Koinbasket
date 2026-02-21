@@ -4,12 +4,12 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 const PARTNER_LOGOS = [
-    { name: "Ripple", src: "/assets/Ripple.png" },
-    { name: "Stonks", src: "/assets/Stonks.png" },
-    { name: "Polygon", src: "/assets/Polygon.png" },
-    { name: "Google", src: "/assets/Google logo.png" },
-    { name: "Binance", src: "/assets/Binance Logo.png" },
-    { name: "Angellist", src: "/assets/Angellist logo.png" },
+    { name: "Ripple", src: "/Koinbasket/assets/Ripple.png" },
+    { name: "Stonks", src: "/Koinbasket/assets/Stonks.png" },
+    { name: "Polygon", src: "/Koinbasket/assets/Polygon.png" },
+    { name: "Google", src: "/Koinbasket/assets/Google logo.png" },
+    { name: "Binance", src: "/Koinbasket/assets/Binance Logo.png" },
+    { name: "Angellist", src: "/Koinbasket/assets/Angellist logo.png" },
 ];
 
 export default function Companies() {

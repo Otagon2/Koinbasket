@@ -30,7 +30,7 @@ export default function Footer() {
                     <div className="lg:col-span-4 flex flex-col gap-6 items-center lg:items-start text-center lg:text-left">
                         <div className="flex items-center gap-3 text-white font-display font-bold text-2xl tracking-tight">
                             <Image
-                                src="/assets/logo-small.png"
+                                src="/Koinbasket/assets/logo-small.png"
                                 alt="KoinBasket Logo"
                                 width={40}
                                 height={40}

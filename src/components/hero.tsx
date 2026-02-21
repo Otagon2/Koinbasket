@@ -88,7 +88,7 @@ export default function Hero() {
                                 className="relative flex justify-center lg:justify-end"
                             >
                                 <Image
-                                    src="/assets/hero image.png"
+                                    src="/Koinbasket/assets/hero image.png"
                                     alt="KoinBasket App Experience"
                                     width={550}
                                     height={750}

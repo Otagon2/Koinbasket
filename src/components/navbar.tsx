@@ -58,7 +58,7 @@ export default function Navbar() {
                 {/* Logo */}
                 <div className="flex items-center gap-3 cursor-pointer group">
                     <Image
-                        src="/assets/logo-small.png"
+                        src="/Koinbasket/assets/logo-small.png"
                         alt="KoinBasket Logo"
                         width={isScrolled ? 36 : 40}
                         height={isScrolled ? 36 : 40}

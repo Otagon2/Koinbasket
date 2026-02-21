@@ -90,7 +90,7 @@ export default function ProductProof() {
                         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16">
                             <div className="relative group/logo flex items-center justify-center">
                                 <Image
-                                    src="/assets/Binance Logo.png"
+                                    src="/Koinbasket/assets/Binance Logo.png"
                                     alt="Binance"
                                     width={240}
                                     height={60}
@@ -103,7 +103,7 @@ export default function ProductProof() {
 
                             <div className="relative group/logo flex items-center justify-center">
                                 <Image
-                                    src="/assets/Coinbase Logo.png"
+                                    src="/Koinbasket/assets/Coinbase Logo.png"
                                     alt="Coinbase"
                                     width={240}
                                     height={60}
