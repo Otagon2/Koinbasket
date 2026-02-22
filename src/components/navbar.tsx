@@ -60,8 +60,8 @@ export default function Navbar() {
                     <Image
                         src="/Koinbasket/assets/logo-small.png"
                         alt="KoinBasket Logo"
-                        width={isScrolled ? 36 : 40}
-                        height={isScrolled ? 36 : 40}
+                        width={isScrolled ? 24 : 26}
+                        height={isScrolled ? 24 : 26}
                         className="group-hover:opacity-80 transition-all duration-300"
                         priority
                     />
@@ -103,7 +103,7 @@ export default function Navbar() {
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle mobile menu"
                     >
-                        {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
                     </button>
                 </div>
             </div>

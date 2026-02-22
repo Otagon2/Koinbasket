@@ -19,7 +19,7 @@ export default function Footer() {
                         Join thousands of smart investors using KoinBasket to diversify and automate their crypto portfolios. Secure your financial future today.
                     </p>
                     <button className="bg-brand-lime text-brand-dark text-lg font-bold px-10 py-5 rounded-full hover:bg-[#a5db38] hover:shadow-[0_0_30px_rgba(178,240,66,0.5)] transition-all duration-300 cursor-pointer flex items-center gap-3 group relative z-10 shadow-[0_0_15px_rgba(178,240,66,0.3)]">
-                        Create Your Free Account
+                        Get started
                         <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                     </button>
                 </div>
