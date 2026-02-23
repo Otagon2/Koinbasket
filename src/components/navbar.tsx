@@ -56,16 +56,18 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
-                <div className="flex items-center gap-3 cursor-pointer group">
-                    <Image
-                        src="/Koinbasket/assets/logo-small.png"
-                        alt="KoinBasket Logo"
-                        width={isScrolled ? 24 : 26}
-                        height={isScrolled ? 24 : 26}
-                        className="group-hover:opacity-80 transition-all duration-300"
-                        priority
-                    />
-                    <span className={`font-display font-bold text-2xl tracking-tight transition-colors duration-300 ${isScrolled ? "text-white group-hover:text-brand-lime" : "text-white group-hover:text-brand-lime"}`}>
+                <div className="flex items-center gap-3 cursor-pointer group shrink-0">
+                    <div className="flex items-center justify-center">
+                        <Image
+                            src="/Koinbasket/assets/logo-small.png"
+                            alt="KoinBasket Logo"
+                            width={isScrolled ? 24 : 26}
+                            height={isScrolled ? 24 : 26}
+                            className="group-hover:opacity-80 transition-all duration-300"
+                            priority
+                        />
+                    </div>
+                    <span className={`font-display font-bold text-2xl tracking-tight leading-none transition-colors duration-300 ${isScrolled ? "text-white group-hover:text-brand-lime" : "text-white group-hover:text-brand-lime"}`}>
                         KoinBasket
                     </span>
                 </div>
@@ -99,11 +101,11 @@ export default function Navbar() {
 
                     {/* Mobile Menu Toggle */}
                     <button
-                        className={`md:hidden transition-colors duration-200 cursor-pointer ml-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-md p-1 ${isScrolled ? "text-white/90 hover:text-brand-lime" : "text-white/90 hover:text-brand-lime"}`}
+                        className={`md:hidden transition-colors duration-200 cursor-pointer ml-2 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-md p-1 flex items-center justify-center ${isScrolled ? "text-white/90 hover:text-brand-lime" : "text-white/90 hover:text-brand-lime"}`}
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
                         aria-label="Toggle mobile menu"
                     >
-                        {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                        {isMobileMenuOpen ? <X size={24} className="block" /> : <Menu size={24} className="block" />}
                     </button>
                 </div>
             </div>
