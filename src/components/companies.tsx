@@ -29,11 +29,12 @@ export default function Companies() {
 
                     <div className="flex flex-wrap justify-center items-center gap-x-12 gap-y-8 md:gap-x-16">
                         {PARTNER_LOGOS.map((logo) => (
-                            <motion.div
+                            <motion.a
                                 key={logo.name}
+                                href="https://www.koinbasket.com"
                                 whileHover={{ scale: 1.05 }}
                                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
-                                className="relative h-8 md:h-10 w-auto flex items-center justify-center hover:scale-110 transition-all duration-300"
+                                className="relative h-8 md:h-10 w-auto flex items-center justify-center hover:scale-110 transition-all duration-300 cursor-pointer"
                             >
                                 <Image
                                     src={logo.src}
@@ -42,7 +43,7 @@ export default function Companies() {
                                     height={50}
                                     className="h-full w-auto object-contain"
                                 />
-                            </motion.div>
+                            </motion.a>
                         ))}
                     </div>
                 </motion.div>

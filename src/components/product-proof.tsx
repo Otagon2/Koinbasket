@@ -38,7 +38,7 @@ export default function ProductProof() {
                                 <li>• <strong className="text-white">100% Non-Custodial</strong> – Your funds stay with you.</li>
                             </ul>
 
-                            <a href="#" className="bg-brand-lime text-brand-dark text-base font-bold px-8 py-3 rounded-full hover:bg-[#a5db38] transition-all duration-300 w-fit cursor-pointer shadow-[0_0_15px_rgba(178,240,66,0.3)] hover:shadow-[0_0_25px_rgba(178,240,66,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
+                            <a href="https://www.koinbasket.com" className="bg-brand-lime text-brand-dark text-base font-bold px-8 py-3 rounded-full hover:bg-[#a5db38] transition-all duration-300 w-fit cursor-pointer shadow-[0_0_15px_rgba(178,240,66,0.3)] hover:shadow-[0_0_25px_rgba(178,240,66,0.5)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
                                 Connect Securely
                             </a>
                         </div>

@@ -64,22 +64,24 @@ export default function Rewards() {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.15 }}
-                            className={`p-8 rounded-3xl border shadow-sm flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 ${reward.color}`}
+                            className={`rounded-3xl border shadow-sm flex flex-col items-center text-center hover:-translate-y-2 transition-transform duration-300 ${reward.color}`}
                         >
-                            <h3 className="text-xl font-bold text-slate-800 mb-2">{reward.title}</h3>
-                            <p className="text-slate-600 mb-8">{reward.description}</p>
+                            <a href="https://www.koinbasket.com" className="p-8 w-full h-full flex flex-col items-center text-center">
+                                <h3 className="text-xl font-bold text-slate-800 mb-2">{reward.title}</h3>
+                                <p className="text-slate-600 mb-8">{reward.description}</p>
 
-                            <div className="mt-auto flex gap-4 items-center justify-center">
-                                {reward.tokens.map((token, i) => (
-                                    <div key={i} className="w-12 h-12 rounded-full bg-white shadow-md p-2 flex items-center justify-center group relative cursor-help hover:scale-110 transition-transform">
-                                        <img src={token.src} alt={token.name} className="w-8 h-8 object-contain" />
-                                        {/* Tooltip */}
-                                        <div className="absolute -top-10 scale-0 group-hover:scale-100 transition-transform bg-slate-800 text-white text-xs py-1 px-2 rounded font-medium whitespace-nowrap">
-                                            {token.name}
+                                <div className="mt-auto flex gap-4 items-center justify-center">
+                                    {reward.tokens.map((token, i) => (
+                                        <div key={i} className="w-12 h-12 rounded-full bg-white shadow-md p-2 flex items-center justify-center group relative cursor-help hover:scale-110 transition-transform">
+                                            <img src={token.src} alt={token.name} className="w-8 h-8 object-contain" />
+                                            {/* Tooltip */}
+                                            <div className="absolute -top-10 scale-0 group-hover:scale-100 transition-transform bg-slate-800 text-white text-xs py-1 px-2 rounded font-medium whitespace-nowrap">
+                                                {token.name}
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
-                            </div>
+                                    ))}
+                                </div>
+                            </a>
                         </motion.div>
                     ))}
                 </div>
@@ -91,9 +93,9 @@ export default function Rewards() {
                     transition={{ delay: 0.5 }}
                     className="mt-16 flex justify-center"
                 >
-                    <button className="bg-brand-dark hover:bg-slate-800 text-brand-lime font-bold text-lg py-4 px-12 rounded-full shadow-lg shadow-brand-dark/20 transition-all hover:-translate-y-1 hover:shadow-xl">
+                    <a href="https://www.koinbasket.com" className="bg-brand-dark hover:bg-slate-800 text-brand-lime font-bold text-lg py-4 px-12 rounded-full shadow-lg shadow-brand-dark/20 transition-all hover:-translate-y-1 hover:shadow-xl">
                         Refer Now!
-                    </button>
+                    </a>
                 </motion.div>
             </div>
         </section>

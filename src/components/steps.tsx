@@ -70,8 +70,9 @@ export default function Steps() {
                         const isActive = index === activeIndex;
 
                         return (
-                            <motion.div
+                            <motion.a
                                 key={index}
+                                href="https://www.koinbasket.com"
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, margin: "-50px" }}
@@ -139,7 +140,7 @@ export default function Steps() {
                                     </h3>
                                     <div className={`h-1 mx-auto rounded-full transition-all duration-300 ${isActive ? 'w-20 bg-brand-dark' : 'w-8 bg-brand-dark/20 group-hover:w-16 group-hover:bg-brand-dark/50'}`} />
                                 </div>
-                            </motion.div>
+                            </motion.a>
                         );
                     })}
                 </div>

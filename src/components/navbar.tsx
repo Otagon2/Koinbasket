@@ -40,11 +40,11 @@ export default function Navbar() {
     }, []);
 
     const navLinks = [
-        { name: "Home", href: "#hero-section" },
-        { name: "Dashboard", href: "#" },
-        { name: "News Room", href: "#" },
-        { name: "Research Articles", href: "#research-academy" },
-        { name: "FAQs", href: "#" },
+        { name: "Home", href: "https://www.koinbasket.com" },
+        { name: "Dashboard", href: "https://www.koinbasket.com" },
+        { name: "News Room", href: "https://www.koinbasket.com" },
+        { name: "Research Articles", href: "https://www.koinbasket.com" },
+        { name: "FAQs", href: "https://www.koinbasket.com" },
     ];
 
     return (
@@ -56,7 +56,7 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
                 {/* Logo */}
-                <div className="flex items-center gap-3 cursor-pointer group shrink-0">
+                <a href="https://www.koinbasket.com" className="flex items-center gap-3 cursor-pointer group shrink-0">
                     <div className="flex items-center justify-center">
                         <Image
                             src="/Koinbasket/assets/logo-small.png"
@@ -70,7 +70,7 @@ export default function Navbar() {
                     <span className={`font-display font-bold text-2xl tracking-tight leading-none transition-colors duration-300 ${isScrolled ? "text-white group-hover:text-brand-lime" : "text-white group-hover:text-brand-lime"}`}>
                         KoinBasket
                     </span>
-                </div>
+                </a>
 
                 {/* Desktop Links (Absolutely Centered) */}
                 <div className="hidden md:flex absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 items-center gap-8">
@@ -88,15 +88,15 @@ export default function Navbar() {
                 {/* Right Actions */}
                 <div className="flex items-center gap-4">
                     <div className="hidden md:flex items-center gap-6">
-                        <button className={`text-sm font-semibold transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-md px-2 py-1 ${isScrolled ? "text-white/90 hover:text-white" : "text-white/90 hover:text-white"}`}>
+                        <a href="https://www.koinbasket.com" className={`text-sm font-semibold transition-colors duration-200 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-md px-2 py-1 ${isScrolled ? "text-white/90 hover:text-white" : "text-white/90 hover:text-white"}`}>
                             Log in
-                        </button>
-                        <button className={`text-sm font-bold px-6 py-2.5 transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-full ${isScrolled
+                        </a>
+                        <a href="https://www.koinbasket.com" className={`text-sm font-bold px-6 py-2.5 transition-all duration-300 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-full ${isScrolled
                             ? "bg-brand-lime text-brand-dark hover:bg-[#a5db38] hover:shadow-[0_0_15px_rgba(187,240,75,0.4)]"
                             : "bg-brand-lime text-brand-dark hover:bg-[#a5db38] hover:shadow-[0_0_15px_rgba(187,240,75,0.4)]"
                             }`}>
                             Get Started
-                        </button>
+                        </a>
                     </div>
 
                     {/* Mobile Menu Toggle */}
@@ -124,12 +124,12 @@ export default function Navbar() {
                         </a>
                     ))}
                     <div className="h-px w-full bg-white/10 my-2" />
-                    <button className="w-full text-center text-base font-medium text-white/90 hover:text-brand-lime transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-md py-1">
+                    <a href="https://www.koinbasket.com" className="w-full text-center text-base font-medium text-white/90 hover:text-brand-lime transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark rounded-md py-1">
                         Log in
-                    </button>
-                    <button className="w-full bg-brand-lime text-brand-dark text-base font-bold px-6 py-3 rounded-xl hover:bg-[#a5db38] transition-colors duration-300 shadow-lg flex justify-center items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
+                    </a>
+                    <a href="https://www.koinbasket.com" className="w-full bg-brand-lime text-brand-dark text-base font-bold px-6 py-3 rounded-xl hover:bg-[#a5db38] transition-colors duration-300 shadow-lg flex justify-center items-center focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-lime focus-visible:ring-offset-2 focus-visible:ring-offset-brand-dark">
                         Get Started
-                    </button>
+                    </a>
                 </div>
             )}
         </nav>
